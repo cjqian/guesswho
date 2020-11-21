@@ -1,10 +1,10 @@
 .card.flipped{
-	width:100px;
-	height:100px;
+	width: 112px;
+	height: 168px;
 	background-color: #000;
-	background-repeat:no-repeat;
+	background-repeat: no-repeat;
 }
 
-.card.flipped img{
-	display:none;
+.image.flipped {
+	display: none;
 }
