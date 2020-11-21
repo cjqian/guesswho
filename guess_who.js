@@ -11,7 +11,7 @@ for (var i = 0; i < N_IMAGES; i++) {
 
 	images.push(image_path);
 	document.getElementById('container').innerHTML +=
-		`<div><a href=${image_path}>
+		`<div>
 		<img class='card' src=${image_path}>
 		</a></div>`;
 };
