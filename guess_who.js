@@ -27,12 +27,14 @@ function loadImages() {
 					</span>`;
 		}
 		if (row === 0) {
-			html += `<span class='my-character-text'>?? My Character ?? </span>`;
+			html += `<span class='my-card-col my-character-text'>?? My Character ?? </span>`;
 		} else if (row === 1) {
 			html +=
-				`<span class='my-card'>
-					<img class='image' src=${myPersonPath}>
+				`<span class='my-card-col my-card'>
+					<img class='my-image' src=${myPersonPath}>
 				</span>`;
+		} else {
+			html += `<span class='my-card-col'></span>`;
 		}
 		html += `</div>`;
 	}
@@ -43,7 +45,5 @@ function loadImages() {
 		$(this).toggleClass('flipped');
 		$(this).children().toggleClass('flipped')
 	});
-
-	document.getElementsByClassName('card')[myPersonIndex].click();
 }
 loadImages();
