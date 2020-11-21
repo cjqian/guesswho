@@ -19,7 +19,6 @@ function loadImages() {
 			index = row * COLS + col;
 			image_path = DIRECTORY + VERSION + index + EXTENSION;
 
-			images.push(image_path);
 			html += `<span class='card'>
 						<img class='image' src=${image_path}>
 					</span>`;
