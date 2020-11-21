@@ -9,11 +9,25 @@
 	flex-direction: column;
 }
 
-.card.flipped{
+.my-card{
 	width: 112px;
 	height: 168px;
+}
+
+.card {
+	width: 112px;
+	height: 168px;
+	margin: 2px;
+}
+
+.card.flipped {
 	background-color: #000;
 	background-repeat: no-repeat;
+}
+
+.image {
+	width: 112px;
+	height: 168px;
 }
 
 .image.flipped {

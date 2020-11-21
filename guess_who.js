@@ -30,13 +30,13 @@ function loadImages() {
 }
 loadImages();
 
-// Load .myPerson with a random person.
+/** Load .myPerson with a random person. */
 function loadMyPerson() {
 	var idx = Math.floor(Math.random() * N_IMAGES);
 	var image_path = getImagePathFromIndex(idx);
 
 	document.getElementById('myPerson').innerHTML +=
-		`<div class='card'>
+		`<div class='my-card'>
 			<img class='image' src=${image_path}>
 		</div>`;
 
