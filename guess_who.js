@@ -11,8 +11,26 @@ function getImagePathFromIndex(i) {
 	return image_path;
 };
 
+let myPersonIndex = -1;
+
+/** Load .myPerson with a random person. */
+function loadMyPerson() {
+	myPersonIndex = Math.floor(Math.random() * N_IMAGES);
+	const image_path = getImagePathFromIndex(myPersonIndex);
+
+	document.getElementById('myPerson').innerHTML +=
+		`<div class='my-card'>
+			<img class='image' src=${image_path}>
+		</div>`;
+
+};
+loadMyPerson();
+
 function loadImages() {
 	let html = `<div class='grid'>`;
+	myPersonIndex = Math.floor(Math.random() * N_IMAGES);
+	const myPersonPath = getImagePathFromIndex(myPersonIndex);
+
 	for (let row = 0; row < ROWS; row++) {
 		html += `<div class='row'>`;
 		for (let col = 0; col < COLS; col++) {
@@ -23,6 +41,14 @@ function loadImages() {
 						<img class='image' src=${image_path}>
 					</span>`;
 		}
+		if (row === 0) {
+			html += `<span class='my-character-text'>?? My Character ?? </span>`;
+		} else if (row === 1) {
+			html +=
+				`<span class='my-card'>
+					<img class='image' src=${myPersonPath}>
+				</span>`;
+		}
 		html += `</div>`;
 	}
 	html += `</div>`;
@@ -30,21 +56,7 @@ function loadImages() {
 }
 loadImages();
 
-/** Load .myPerson with a random person. */
-function loadMyPerson() {
-	var idx = Math.floor(Math.random() * N_IMAGES);
-	var image_path = getImagePathFromIndex(idx);
-
-	document.getElementById('myPerson').innerHTML +=
-		`<div class='my-card'>
-			<img class='image' src=${image_path}>
-		</div>`;
-
-};
-loadMyPerson();
-
 $('.card').click(function () {
 	$(this).toggleClass('flipped');
 	$(this).children().toggleClass('flipped')
-
 });

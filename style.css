@@ -26,6 +26,7 @@ p, div {
 }
 
 .my-card{
+	flex: 2 1 0;
 	width: 112px;
 	height: 168px;
 }
