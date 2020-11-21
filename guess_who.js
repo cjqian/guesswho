@@ -1,5 +1,10 @@
 const DIRECTORY = './img/';
-const VERSION = 'v1/';
+
+let VERSION = 'v1/';
+const version = new URLSearchParams(document.location.search.substring(1)).get('version');
+if (version && version === 'v2') {
+	VERSION = 'v2/';
+}
 const BLACK_IMAGE = DIRECTORY + 'black.jpg';
 const EXTENSION = '.jpg';
 const N_IMAGES = 24;
