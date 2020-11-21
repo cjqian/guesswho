@@ -1,3 +1,11 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Corben', Georgia, Times, serif;
+}
+
+p, div {
+    font-family: 'Nobile', Helvetica, Arial, sans-serif;
+}
+
 .row {
 	display: flex;
 	width: 100%;
@@ -9,10 +17,19 @@
 	flex-direction: column;
 }
 
+#container {
+	margin:auto;
+	width:80%;
+	background-color: #8B0000;
+	padding:20px;
+	border-radius:20px;
+}
+
 .my-card{
 	width: 112px;
 	height: 168px;
 }
+
 
 .card {
 	width: 112px;
