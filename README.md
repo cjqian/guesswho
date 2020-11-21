@@ -3,4 +3,6 @@ Guess Who?! is a web interface for the the [Guess Who?](https://en.wikipedia.org
 
 Pull it up with a friend and get guessing!
 
+> Note: Add `?version=v2` to switch up the deck of characters.
+
 Authors: cjqian@, jstimes@
